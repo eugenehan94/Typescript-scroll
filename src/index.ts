@@ -62,10 +62,10 @@ scrollLinks.forEach((link) => {
     const id = target!.getAttribute("href")!.slice(1);
     const element = document.getElementById(id);
 
-    const navHeight = navbar!.getBoundingClientRect().height;
-    const containerHeight = linksContainer!.getBoundingClientRect().height;
-    const fixedNav = navbar?.classList.contains("fixed-nav");
-    let position = element!.offsetTop - navHeight;
+    const navHeight: number = navbar!.getBoundingClientRect().height;
+    const containerHeight: number = linksContainer!.getBoundingClientRect().height;
+    const fixedNav: boolean = navbar?.classList.contains("fixed-nav");
+    let position: number = element!.offsetTop - navHeight;
 
     if (!fixedNav) {
       position = position - navHeight;
